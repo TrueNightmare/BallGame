@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a2a673ca9dc4046b9640d23d0bada1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Locked: 0
-  LockUp: {fileID: 2100000, guid: 541800ce051c9be4dadb72cde8296f68, type: 2}
-  Clear: {fileID: 2100000, guid: 8c013145f6b676a41a045cda33b15184, type: 2}
-  Colour: {r: 1, g: 1, b: 1, a: 1}
+  Locked: {fileID: 2100000, guid: 541800ce051c9be4dadb72cde8296f68, type: 2}
+  Unlocked: {fileID: 2100000, guid: 8c013145f6b676a41a045cda33b15184, type: 2}
+  colour: 0
 --- !u!1001 &2870092518587486502
 PrefabInstance:
   m_ObjectHideFlags: 0

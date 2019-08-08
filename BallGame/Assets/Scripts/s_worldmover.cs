@@ -26,7 +26,7 @@ public class s_worldmover : MonoBehaviour
 
         Euler = Quaternion.Euler(x, 0, z);
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (Input.GetButton("Horizontal") && GameManager.Instance.CanPlayerMove || Input.GetButton("Vertical") && GameManager.Instance.CanPlayerMove)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Euler, Time.deltaTime * 2);
         }
