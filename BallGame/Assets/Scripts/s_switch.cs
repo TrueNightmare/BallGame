@@ -21,7 +21,7 @@ public class s_switch : MonoBehaviour
     void Start()
     {
         MaterialRenderer = GetComponent<Renderer>();
-        OffsetPoint = transform.position;
+        OffsetPoint = transform.localPosition;
 
         switch (colour)
         {
@@ -51,7 +51,7 @@ public class s_switch : MonoBehaviour
 
         var TempPos = OffsetPoint;
         TempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI) * 0.2f;
-        transform.position = TempPos;
+        transform.localPosition = TempPos;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,6 +8,7 @@ public class s_startGame : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     public GameObject DestoryRails;
+    public Canvas HUD;
 
     int CountDown = 4;
     // Start is called before the first frame update
@@ -38,6 +39,8 @@ public class s_startGame : MonoBehaviour
                     break;
                 case 0:
                     GameManager.Instance.CanPlayerMove = true;
+                    GameManager.Instance.Timer.SetActive(true);
+                    HUD.enabled = true;
                     Destroy(DestoryRails);
                     Destroy(gameObject);
                     break;

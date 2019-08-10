@@ -14,12 +14,21 @@ public class s_startlevelSettings : MonoBehaviour
     public bool GreenLocked = true;
     public bool YellowLocked = true;
 
+    [Header("Medal Times")]
+    public float goldTime;
+    public float sliverTime;
+    public float bronzeTime;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GameManager.Instance.RedLocked = RedLocked;
         GameManager.Instance.BlueLocked = BlueLocked;
         GameManager.Instance.GreenLocked = GreenLocked;
         GameManager.Instance.YellowLocked = YellowLocked;
+
+        GameManager.Instance.goldTime = goldTime;
+        GameManager.Instance.sliverTime = sliverTime;
+        GameManager.Instance.bronzeTime = bronzeTime;
     }
 }

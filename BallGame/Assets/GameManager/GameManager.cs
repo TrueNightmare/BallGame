@@ -33,10 +33,21 @@ public class GameManager : MonoBehaviour
     [Header("Background Level")]
     public float Seconds;
 
+    [Header("Level Timer")]
+    public GameObject TimerGameObject;
+    public s_Timer Timer;
+    public float goldTime;
+    public float sliverTime;
+    public float bronzeTime;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        TimerGameObject = new GameObject();
+        TimerGameObject.AddComponent<s_Timer>();
+        Timer = TimerGameObject.GetComponent<s_Timer>();
+        Timer.SetActive(false);
+        Timer.ResetClock();
     }
 
     // Update is called once per frame
@@ -44,7 +55,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    //public enum Colour { Red, Blue, Green, Yellow }
 
     public void ChangeLockedState(int ColourIndex)
     {

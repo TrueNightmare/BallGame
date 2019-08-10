@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class s_goal : MonoBehaviour
 {
+    BoxCollider[] BoxColliders;
+
+    public GameObject WinScreen;
+    public Canvas HUD;
     // Start is called before the first frame update
     void Start()
     {
-        
+        BoxColliders = GetComponents<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -20,7 +24,13 @@ public class s_goal : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player Detected", other);
+            AudioManager.instance.Play("Win");
+            GameManager.Instance.CanPlayerMove = false;
+            GameManager.Instance.Timer.SetActive(false);
+            WinScreen.GetComponent<Canvas>().enabled = true;
+            WinScreen.GetComponent<s_EndScreen>().UpdateScore();
+            HUD.enabled = true;
+            BoxColliders[1].enabled = false;
         }
     }
 }

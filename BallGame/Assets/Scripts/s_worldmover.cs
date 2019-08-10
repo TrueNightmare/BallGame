@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class s_worldmover : MonoBehaviour
 {
+
+    [Header("Required Settings")]
+    public GameObject Player;
+    GameObject Level;
+
     [Header("Degree Limits")]
     public float MaxX = 35;
     public float MaxZ = 35;
@@ -11,11 +16,20 @@ public class s_worldmover : MonoBehaviour
     float x;
     float z;
     private Quaternion Euler;
-    
+
+    Vector3 LastLocation;
+    float DifferenceX;
+    float DifferenceZ;
+
+    private void Awake()
+    {
+        Level = transform.GetChild(0).gameObject;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-
+        LastLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -34,5 +48,18 @@ public class s_worldmover : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 2);
         }
+
+        transform.position = new Vector3(Player.transform.position.x, transform.position.y, Player.transform.position.z);
+        UpdateLevelLocation();
+    }
+
+    void UpdateLevelLocation()
+    {
+        DifferenceX = LastLocation.x - transform.position.x;
+        DifferenceZ = LastLocation.z - transform.position.z;
+
+        LastLocation = transform.position;
+
+        Level.transform.localPosition += new Vector3(DifferenceX, 0, DifferenceZ);
     }
 }
