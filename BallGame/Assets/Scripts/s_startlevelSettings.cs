@@ -9,10 +9,14 @@ public class s_startlevelSettings : MonoBehaviour
      */
 
     [Header("Locks")]
-    public bool BlueLocked = true;
-    public bool RedLocked = true;
-    public bool GreenLocked = true;
-    public bool YellowLocked = true;
+
+    public bool BlueLocked;
+    public bool RedLocked;
+    public bool GreenLocked;
+    public bool YellowLocked;
+
+    [Header("Player Controls")]
+    public bool CanPlayerMove = false;
 
     [Header("Medal Times")]
     public float goldTime;
@@ -30,5 +34,7 @@ public class s_startlevelSettings : MonoBehaviour
         GameManager.Instance.goldTime = goldTime;
         GameManager.Instance.sliverTime = sliverTime;
         GameManager.Instance.bronzeTime = bronzeTime;
+
+        GameManager.Instance.CanPlayerMove = CanPlayerMove;
     }
 }

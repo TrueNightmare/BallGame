@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class s_Timer : MonoBehaviour
 {
-    public float Seconds;
+    public float Frame;
+    public int Seconds;
     public int Minutes;
-    public int Hours;
     public bool Active { get; private set; }
 
     public s_Timer(bool StartTimer)
@@ -24,17 +24,17 @@ public class s_Timer : MonoBehaviour
     {
         if (Active)
         {
-            Seconds += Time.deltaTime;
+            Frame += Time.deltaTime;
 
-            if (Seconds >= 60)
+            if (Frame >= 60)
             {
-                Seconds = 0;
-                Minutes++;
+                Frame = 0;
+                Seconds++;
 
-                if (Minutes >= 60)
+                if (Seconds >= 60)
                 {
-                    Minutes = 0;
-                    Hours++;
+                    Seconds = 0;
+                    Minutes++;
                 }
             }
         }
@@ -59,32 +59,32 @@ public class s_Timer : MonoBehaviour
 
     public void ResetClock()
     {
+        Frame = 0;
         Seconds = 0;
         Minutes = 0;
-        Hours = 0;
     }
 
     public string CurrentTime()
     {
         string Time = "";
 
-        if (Hours > 0)
+        if (Minutes > 0)
         {
-            Time += Hours + ":";
+            Time += Minutes + ":";
         }
 
-        if (Minutes > 0 || Hours > 0)
+        if (Seconds > 0 || Minutes > 0)
         {
-            Time += Minutes + ";";
+            Time += Seconds + ":";
         }
 
-        Time += Seconds.ToString("F2");
+        Time += Frame.ToString("F2");
 
         return Time;
     }
 
     public float ReturnSeconds()
     {
-        return (((float)Hours * 60) * 60) + ((float)Minutes * 60) + Seconds;        
+        return (((float)Minutes * 60) * 60) + ((float)Seconds * 60) + Frame;        
     }
 }

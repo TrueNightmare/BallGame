@@ -7,7 +7,6 @@ using System;
 public class s_startGame : MonoBehaviour
 {
     public TextMeshProUGUI Text;
-    public GameObject DestoryRails;
     public Canvas HUD;
 
     int CountDown = 4;
@@ -41,7 +40,6 @@ public class s_startGame : MonoBehaviour
                     GameManager.Instance.CanPlayerMove = true;
                     GameManager.Instance.Timer.SetActive(true);
                     HUD.enabled = true;
-                    Destroy(DestoryRails);
                     Destroy(gameObject);
                     break;
                 default:

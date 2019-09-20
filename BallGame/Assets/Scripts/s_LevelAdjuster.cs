@@ -24,7 +24,6 @@ public class s_LevelAdjuster : MonoBehaviour
     {
         CurrentPlayerLocation = Player.transform.position;
         Difference = PlayerStartingLocation - CurrentPlayerLocation;
-        Difference.y = 0;
         LevelPos = transform.position;
 
         transform.position = LevelPos + Difference;

@@ -29,7 +29,7 @@ public class s_goal : MonoBehaviour
             GameManager.Instance.Timer.SetActive(false);
             WinScreen.GetComponent<Canvas>().enabled = true;
             WinScreen.GetComponent<s_EndScreen>().UpdateScore();
-            HUD.enabled = true;
+            HUD.enabled = false;
             BoxColliders[1].enabled = false;
         }
     }
