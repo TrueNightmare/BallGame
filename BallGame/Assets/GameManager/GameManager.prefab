@@ -47,3 +47,94 @@ MonoBehaviour:
   RedLocked: 1
   GreenLocked: 1
   YellowLocked: 1
+  CanPlayerMove: 0
+  GoldMedals: 0
+  SliverMedals: 0
+  Bronze: 0
+  Seconds: 0
+  TimerGameObject: {fileID: 0}
+  Timer: {fileID: 0}
+  goldTime: 0
+  sliverTime: 0
+  bronzeTime: 0
+  LevelTimes:
+  - GoldTime: 5
+    SliverTime: 8
+    BronzeTime: 12
+    BestTime: 999999
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0
+  - GoldTime: 0
+    SliverTime: 0
+    BronzeTime: 0
+    BestTime: 0

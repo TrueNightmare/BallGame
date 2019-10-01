@@ -38,8 +38,8 @@ public class s_startGame : MonoBehaviour
                     break;
                 case 0:
                     GameManager.Instance.CanPlayerMove = true;
-                    GameManager.Instance.Timer.SetActive(true);
                     HUD.enabled = true;
+                    GameManager.Instance.Timer.SetActive(true);
                     Destroy(gameObject);
                     break;
                 default:
