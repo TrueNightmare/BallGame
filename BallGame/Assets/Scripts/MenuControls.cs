@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class MenuControls : MonoBehaviour
 {
@@ -18,6 +19,23 @@ public class MenuControls : MonoBehaviour
     public GameObject SettingsButton;
     public GameObject WorldButton;
 
+    [Header("Audio Mixers")]
+    int GameQauitly;
+    float MasterAudio;
+    float MusicAudio;
+    float FXAudio;
+
+    [Header("Level Select Counter")]
+    public int LevelCount;
+
+    [Header("Level Select Tags")]
+    public TextMeshProUGUI levelName;
+    public TextMeshProUGUI bestTime;
+    public GameObject medalBest;
+    public TextMeshProUGUI goldTime;
+    public TextMeshProUGUI silverTime;
+    public TextMeshProUGUI bronzeTime;
+    public bool isUnlocked;
 
     public void QuitApplication()
     {
@@ -39,8 +57,35 @@ public class MenuControls : MonoBehaviour
         EventSystem.firstSelectedGameObject = MainButton;
     }
 
+    public void MainToWorld()
+    {
+        Main.enabled = false;
+        World.enabled = true;
+        EventSystem.firstSelectedGameObject = WorldButton;
+    }
+
+    public void WorldToMain()
+    {
+        World.enabled = false;
+        Main.enabled = true;
+        EventSystem.firstSelectedGameObject = MainButton;
+    }
+
     public void SetGraphic(int Quailtiy)
     {
-        UnityEngine.QualitySettings.SetQualityLevel(Quailtiy);
+        GameQauitly = Quailtiy;
+    }
+
+    public void ApplySettings()
+    {
+        UnityEngine.QualitySettings.SetQualityLevel(GameQauitly);
+        //Audio still needs to be worked on
+
+        SettingsToMain();
+    }
+
+    public void RequestLevelInformation()
+    {
+
     }
 }
