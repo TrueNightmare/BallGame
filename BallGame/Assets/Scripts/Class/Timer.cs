@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_Timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     public float Frame;
     public int Seconds;
     public int Minutes;
     public bool Active { get; private set; }
 
-    public s_Timer(bool StartTimer)
+    public Timer(bool StartTimer)
     {
         SetActive(StartTimer);
     }

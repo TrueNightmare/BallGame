@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class s_HUD : MonoBehaviour
+public class HUD : MonoBehaviour
 {
     public TextMeshProUGUI Time;
 

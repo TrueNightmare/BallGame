@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_camera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [Header("View Options")]
     public GameObject ViewTarget;
@@ -10,7 +10,7 @@ public class s_camera : MonoBehaviour
 
     public Vector3 Differnce;
     [Header("Rotation Options")]
-    public bool Rotation;
+    public bool ShouldRotation;
     public float Limit;
 
 
@@ -34,19 +34,24 @@ public class s_camera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //If the Camera is meant to follow its target
         if (FollowTarget)
         {
-            transform.position = new Vector3(ViewTarget.transform.position.x + Differnce.x,
+            Vector3 CalulationVector = new Vector3(ViewTarget.transform.position.x + Differnce.x,
                 ViewTarget.transform.position.y + Differnce.y,
                 ViewTarget.transform.position.z + Differnce.z);
+
+            transform.position = CalulationVector;
         }
 
+        //If the Camera is meant to be actively Looking at its target rather then being carried
         if (LookAtTarget)
         {
             transform.LookAt(ViewTarget.transform);
         }
 
-        if (Rotation)
+        //WIP - Calculate rotation so the level looks like it is changing to player movemements
+        if (ShouldRotation)
         {
 
         }

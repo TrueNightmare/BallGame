@@ -4,11 +4,11 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class s_startGame : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     public Canvas HUD;
-
+    
     int CountDown = 4;
     // Start is called before the first frame update
     void Start()

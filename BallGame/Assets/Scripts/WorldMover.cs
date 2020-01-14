@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_worldmover : MonoBehaviour
+public class WorldMover : MonoBehaviour
 {
 
     [Header("Required Settings")]

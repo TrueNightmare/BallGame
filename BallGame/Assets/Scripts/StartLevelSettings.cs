@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_startlevelSettings : MonoBehaviour
+public class StartLevelSettings : MonoBehaviour
 {
     /*
      * All this script does is set up the level for the beginning of the level
@@ -19,9 +19,9 @@ public class s_startlevelSettings : MonoBehaviour
     public bool CanPlayerMove = false;
 
     [Header("Medal Times")]
-    public float goldTime;
-    public float sliverTime;
-    public float bronzeTime;
+    public float GoldTime;
+    public float SliverTime;
+    public float BronzeTime;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,9 +31,9 @@ public class s_startlevelSettings : MonoBehaviour
         GameManager.Instance.GreenLocked = GreenLocked;
         GameManager.Instance.YellowLocked = YellowLocked;
 
-        GameManager.Instance.goldTime = goldTime;
-        GameManager.Instance.sliverTime = sliverTime;
-        GameManager.Instance.bronzeTime = bronzeTime;
+        GameManager.Instance.goldTime = GoldTime;
+        GameManager.Instance.sliverTime = SliverTime;
+        GameManager.Instance.bronzeTime = BronzeTime;
 
         GameManager.Instance.CanPlayerMove = CanPlayerMove;
     }

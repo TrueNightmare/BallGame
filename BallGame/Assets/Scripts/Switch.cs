@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_switch : MonoBehaviour
+public class Switch : MonoBehaviour
 {
     //Variables Not seen in inspector
     public enum Colour { Red, Blue, Green, Yellow }
@@ -17,6 +17,8 @@ public class s_switch : MonoBehaviour
     public Colour colour;
     public float SecondsToWait = 2.0f;
     public bool AllowReset = true;
+
+    public float RotationSpeed = 50f;
 
     void Start()
     {
@@ -47,7 +49,7 @@ public class s_switch : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(0, 50 * Time.deltaTime, 0);
+        transform.Rotate(0, RotationSpeed * Time.deltaTime, 0);
 
         var TempPos = OffsetPoint;
         TempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI) * 0.2f;

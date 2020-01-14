@@ -46,20 +46,20 @@ public class GameManager : MonoBehaviour
 
     [Header("Level Timer")]
     public GameObject TimerGameObject;
-    public s_Timer Timer;
+    public Timer Timer;
     public float goldTime;
     public float sliverTime;
     public float bronzeTime;
 
     [Header("Game Overall Settings")]
-    public List<s_LevelTimes> LevelTimes = new List<s_LevelTimes>();
+    public List<LevelTimes> LevelTimes = new List<LevelTimes>();
 
     // Start is called before the first frame update
     void Start()
     {
         TimerGameObject = new GameObject();
-        TimerGameObject.AddComponent<s_Timer>();
-        Timer = TimerGameObject.GetComponent<s_Timer>();
+        TimerGameObject.AddComponent<Timer>();
+        Timer = TimerGameObject.GetComponent<Timer>();
         Timer.SetActive(false);
         Timer.ResetClock();
     }

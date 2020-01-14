@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_LevelAdjuster : MonoBehaviour
+public class LevelAdjuster : MonoBehaviour
 {
     public GameObject Player;
 

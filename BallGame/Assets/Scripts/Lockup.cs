@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_lockup : MonoBehaviour
+public class Lockup : MonoBehaviour
 {
     [Header("Setup")]
     public Material Locked;

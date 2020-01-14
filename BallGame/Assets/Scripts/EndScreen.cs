@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class s_EndScreen : MonoBehaviour
+public class EndScreen : MonoBehaviour
 {
     public TextMeshProUGUI LevelName;
     public TextMeshProUGUI TimeTaken;

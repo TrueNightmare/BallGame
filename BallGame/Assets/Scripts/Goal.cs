@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class s_goal : MonoBehaviour
+public class Goal : MonoBehaviour
 {
     BoxCollider[] BoxColliders;
 
@@ -28,7 +28,7 @@ public class s_goal : MonoBehaviour
             GameManager.Instance.CanPlayerMove = false;
             GameManager.Instance.Timer.SetActive(false);
             WinScreen.GetComponent<Canvas>().enabled = true;
-            WinScreen.GetComponent<s_EndScreen>().UpdateScore();
+            WinScreen.GetComponent<EndScreen>().UpdateScore();
             HUD.enabled = false;
             BoxColliders[1].enabled = false;
         }
